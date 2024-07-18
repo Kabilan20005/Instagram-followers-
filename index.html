@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Getting data from input to send to whatsapp | how to send information entered in form to whatsapp</title>
+<meta name="Keywords" content="whatsapp web form | WhatsForm: Collect data directly to your WhatsApp number | Submit Form as WhatsApp Message">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	
+	<style type="text/css">
+	   .whatsapp_box
+		{
+			background:#f4f9f2;
+			padding: 40px;
+			border-radius: 10px;
+			margin-top: 100px;
+			-webkit-box-shadow: 0px 0px 5px 0px rgba(186,182,186,1);
+-moz-box-shadow: 0px 0px 5px 0px rgba(186,182,186,1);
+box-shadow: 0px 0px 5px 0px rgba(186,182,186,1);
+		}
+		
+		.whatsapp_box h2
+		{
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+	   <div class="row">
+		  <div class="col-md-7 mx-auto">
+		     <div class="whatsapp_box">
+			   <form autocomplete="off">
+				  
+				   <h2>All Details Fill and Send </h1>
+				  
+			      <div class="form-group">
+				     <input type="text" name="Name" id="name" class="form-control" placeholder="Your Name *" value="" required="" />
+				  </div>
+				 
+				  <div class="form-group">
+				    <input type="text" name="Email" id="email" class="form-control" placeholder="Your Email *" value=""required="" />
+				  </div>
+				 <div class="form-group">
+				    <input type="text" name="instagram" id="instagram" class="form-control" placeholder="instagram id OR Profile link *" value="" required="" />
+				  </div>
+				 <div class="form-group">
+				     <select class="form-control" id="service">
+                          <option>1k Followers Rs.70 </option>
+                          <option>2k Followers Rs 129 </option>
+                          <option>5k Followers Rs.299</option>
+                        </select>
+				 </div>
+					  
+				 <div class="form-group">
+					 <input type="submit" onclick="gotowhatsapp()" name="submit" class="btn btn-sm btn-success"
+                     value="SEND ON WHATSAPP" />  
+			     </div>
+			 </div>
+			    </form>
+		  </div>
+	   </div>
+      </div>
+	</div>
+	<script>
+          function gotowhatsapp() {
+            var name = document.getElementById("name").value;
+            var instagram = document.getElementById("instagram").value;
+            var email = document.getElementById("email").value;
+            var service = document.getElementById("service").value;
+var service = document.getElementById("service").value;
+            var url =
+              "https://wa.me/918438749018?text=" +
+              "Name: " +
+              name +
+              "%0a" +
+              "instagram: " +
+              instagram +
+              "%0a" +
+              "Email: " +
+              email +
+              "%0a" +
+              "Service: " +
+              service;
+            window.open(url, "_blank").focus();
+          }
+        </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+.        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+<style>body {
+    background: linear-gradient(to bottom, #3498db, #2c3e50); /* Example: Blue to dark blue */
+}
+body {
+    background-color: #4A82A7E3; /* Example: Blue */
+}
+body {
+    background-image: url('pattern.png'); /* Replace with your pattern image path */
+    background-repeat: repeat; /* Repeat the pattern */
+}
+body {
+    background-image: url('background-image.jpg'); /* Replace with your background image path */
+    background-color: rgba(0, 0, 0, 0.5); /* Example: Semi-transparent black overlay */
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+@keyframes gradientAnimation {
+    0% { background-color: #DB34BBCC; }
+    50% { background-color: #286069; }
+    100% { background-color: #8A6666; }
+}
+
+body {
+    background: linear-gradient(to right, #293CAB, #8E3894);
+    animation: gradientAnimation 5s ease infinite alternate; /* Example: Alternating animation */
+}
+</style>
